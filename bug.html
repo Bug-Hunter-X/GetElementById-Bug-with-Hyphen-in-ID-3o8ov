@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrect way to select an element with an id containing a hyphen
+    var element = document.getElementById('my-div');
+    if (element) {
+      element.style.display = 'none';
+    } else {
+      console.log('Element not found');
+    }
+  </script>
+</body>
+</html>
